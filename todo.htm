@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <!-- css-styling -->
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+        scrollbar-width: none;
+    }
+    .bg{
+        background-image: url('todoimg2.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+
+     .container{
+        position: relative;
+        top:25vh;
+        left:20vw;
+        border-radius: 15px;
+        background:transparent;
+        border: 2px solid white;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1{
+       text-align: center;
+       color:white;
+      margin-bottom: 5px;
+    }
+
+    #input{
+        border-color: aquamarine;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    #input :focus{
+        outline: none;
+    }
+
+    #button{
+        background-color: rgb(67, 194, 175);
+        color: white;
+        border-color:rgb(120, 225, 190);
+        border-radius: 5px;
+        position: absolute;
+        top:40px;
+        right:30%;
+        padding: 2px 3px;
+    }
+    .del{
+        background-color: rgb(202, 62, 62);
+        color: white;
+        border-color:rgb(234, 117, 117);
+        border-radius: 5px;
+        padding: 3px;
+        
+    }
+    ul{
+        list-style-type: none;
+    }
+    li{
+        color:white;
+        font-size:20px; 
+        font-weight: 200;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+    } 
+  
+</style>
+</head>
+<body class="bg">
+  
+    <div class="container">
+    <h1>To-do list</h1>
+    <input type="text" id="input">
+    <button id="button">Add</button>
+    <div class="container-2">
+    <ul id="list">
+        
+    </ul>
+    </div>
+</div>
+
+    <script src="script.js"></script> <!--javascript file-->
+    
+</body>
+</html>
