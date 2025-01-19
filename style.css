@@ -1,0 +1,210 @@
+
+    /* *{
+        padding: 0%;
+        margin: 0%;
+        font-family: Arial, Helvetica, sans-serif;
+
+        scrollbar-width: none;
+    }
+    .bg{
+        background-image: url('image/todoimg2.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+
+     .container{
+        position: relative;
+        top:25vh;
+        left:20vw;
+        border-radius: 15px;
+        background:transparent;
+        border: 2px solid white;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1{
+       text-align: center;
+       color:white;
+      margin-bottom: 5px;
+    }
+
+    #input{
+        border-color: aquamarine;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    #input :focus{
+        outline: none;
+    }
+
+    #button{
+        background-color: rgb(67, 194, 175);
+        color: white;
+        border-color:rgb(120, 225, 190);
+        border-radius: 5px;
+        position: absolute;
+        top:40px;
+        right:30%;
+        padding: 2px 3px;
+    }
+    .del{
+        background-color: rgb(202, 62, 62);
+        color: white;
+        border-color:rgb(234, 117, 117);
+        border-radius: 5px;
+        padding: 3px;
+        
+    }
+    ul{
+        list-style-type: none;
+    }
+    li{
+        color:white;
+        font-size:20px; 
+        font-weight: 200;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+    } 
+   */
+
+
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container for the to-do list */
+  .container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Heading Styles */
+  .heading {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #333333;
+    font-size: 24px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+
+  .input-container {
+    display: flex;
+    margin: 20px 0;
+  }
+  
+  .task-Input{
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .task-Input:focus {
+    border-color: #007bff;
+  }
+  
+  .add-Task {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .add-Task:hover {
+    background-color: #0056b3;
+  }
+
+  /* Task List Container */
+
+  .container-2 {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .task-List{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .itemst:hover {
+    background-color: #eaeaea;
+  }
+  
+  
+  /* To-Do List Styles
+  .todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .todo-item:hover {
+    background-color: #eaeaea;
+  } */
+  
+  /* Delete Button Styles */
+  .del {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .del:hover {
+    background-color: #ff0505;
+  }
