@@ -1,50 +1,57 @@
-const ul=document.getElementById("list");//ul
-const inputbox=document.getElementById("input");//box
-const button=document.getElementById("button");//button
-loaditems();
 
-function value(){
+const addButton = document.getElementById("addTask");
+const taskInput = document.getElementById("taskInput");
+const taskList = document.getElementById("taskList");
 
-   const input=inputbox.value.trim();
-if(input){
-    add(input);
-    inputbox.value='';
-    savelist();
-}
-else{
+loadtasks();
+
+function values(){  
+
+   const task = taskInput.value.trim();
+
+    if(task){
+
+      taskElement(task);
+    taskInput.value='';
+    saveTasks();
+
+    }
+    else{
     alert("Enter your do list!");
-}
+    }
 }
 
-button.addEventListener('click',value);
+addButton.addEventListener('click',values);
 
-function add(input){
+function taskElement(task){
   
-  let list=document.createElement('li');
-  list.textContent=input;
-  ul.appendChild(list); 
+  const listItem = document.createElement('li');
+  listItem.textContent = task;
+  listItem.className = 'items';
+  taskList.appendChild(listItem); 
 
-  let deleteitem= document.createElement('button');
-  deleteitem.textContent="Delete";
-  deleteitem.className='del';
-  list.appendChild(deleteitem);
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = "Delete";
+  deleteButton.className = 'del';
+  listItem.appendChild(deleteButton);
 
-  deleteitem.addEventListener('click',()=>{
-ul.removeChild(list);
-savelist()});
+  deleteButton.addEventListener('click',()=>{
+        taskList.removeChild(listItem);
+        saveTasks();
+        });
   
 }
 
-function savelist(){
-    let task=[];
-    ul.querySelectorAll('li').forEach(items=>{
-        task.push(items.textContent.replace('Delete',''))
+function saveTasks(){
+    let tasks=[];
+    taskList.querySelectorAll('li').forEach(items=>{
+        tasks.push(items.textContent.replace('Delete','').trim())
     });
 
-    localStorage.setItem('task', JSON.stringify(task));
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-function loaditems(){
-    let loadelement=JSON.parse(localStorage.getItem('task'));
-    loadelement.forEach(add);
+function loadtasks(){
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.forEach(taskElement);
 }
